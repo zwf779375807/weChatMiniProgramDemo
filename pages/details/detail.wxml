@@ -1,0 +1,36 @@
+<!--pages/details/detail.wxml-->
+<view class='main'>
+  <Mytitle></Mytitle>
+
+  <view class='video-wrap'>
+    <video src='http://vjs.zencdn.net/v/oceans.mp4' controls custom-cache="{{false}}"></video>
+    <view class='video_title'>
+      <text class='title'>{{videoInfo.videoTitle}}</text>
+      <text class='fa fa-angle-down'></text>
+    </view>
+
+    <view class='video_detail'>
+      <text class='video_author'>{{videoInfo.author}}</text>
+      <text class='video_commentCount'>{{videoInfo.commentCount}}弹幕</text>
+      <text class='video_playCount'>{{videoInfo.playCount}}</text>
+    </view>
+  </view>
+
+  <view class='others-wrap'>
+    <navigator class='others-item' wx:for="{{othersList}}" wx:key="index">
+    <view class='image'>
+      <image src='{{item.imgSrc}}' mode='widthFix'></image>
+    </view>
+    
+      <view class='other-info'>
+       <view class='other-title'>
+        {{item.title}}
+       </view>
+       <view class='other-detail'>
+        <text>{{item.playMsg}}万次观看</text>
+         <text>{{item.commentCount}}弹幕</text>
+       </view>
+      </view>
+    </navigator>
+  </view>
+</view>

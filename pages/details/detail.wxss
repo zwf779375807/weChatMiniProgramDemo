@@ -1,0 +1,71 @@
+/* pages/details/detail.wxss */
+
+.main {
+  padding: 5rpx;
+  color: #666;
+}
+
+.video-wrap {
+  margin-top: 10rpx;
+}
+
+.video-wrap video {
+  width: 100%;
+}
+
+.video_title {
+  display: flex;
+  justify-content: space-between;
+  font-size: 30rpx;
+}
+
+.video_detail {
+  font-size: 28rpx;
+  margin-top: 5rpx;
+}
+
+.video_detail .video_author {
+  color: #000;
+}
+
+.video_detail text {
+  margin-left: 15rpx;
+}
+
+.others-wrap {
+  margin-top: 10rpx;
+}
+
+.others-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20rpx;
+}
+
+.others-wrap .image {
+  width: 38%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.others-wrap .image image {
+  width: 90%;
+  border-radius: 15rpx;
+}
+
+.other-info {
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.other-info .other-title {
+  color: #e66444;
+  font-size: 30rpx;
+}
+
+.other-info .other-detail {
+  font-size: 25rpx;
+}

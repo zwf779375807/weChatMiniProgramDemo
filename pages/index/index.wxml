@@ -20,7 +20,9 @@
   </view>
 
   <view class='videos'>
-    <navigator class='vide_item' wx:for="{{videosList}}" wx:key="{{index}}">
+    <navigator 
+     url='../details/detail?id={{item.id}}'
+    class='vide_item' wx:for="{{videosList}}" wx:key="{{index}}">
       <view class='video_img'>
         <image mode='widthFix' src='{{item.imgSrc}}'></image>
         <view class='video_info'>
