@@ -1,0 +1,6 @@
+/**app.wxss**/
+@import "style/font-awesome.wxss";
+/*增加`fa`样式*/
+page, view, image, swiper, swiper-item, video, nav {
+  box-sizing: border-box;
+}

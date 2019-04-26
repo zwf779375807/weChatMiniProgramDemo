@@ -1,0 +1,17 @@
+<!--components/Mytitle/Mytitle.wxml-->
+<view class='my_title'>
+  <navigator class='logo'>
+    <image class='logo_img' src='../../icon/logo.png'></image>
+  </navigator>
+  <view class='search'>
+    <image class='search_img' src='../../icon/search.png'></image>
+  </view>
+
+  <view class='user'>
+    <image class='user_img' src='../../icon/user.png'></image>
+  </view>
+
+  <view class='down_app'>
+    下载app
+  </view>
+</view>
