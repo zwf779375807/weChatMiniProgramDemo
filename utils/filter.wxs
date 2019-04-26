@@ -1,0 +1,13 @@
+/**
+ * 模拟一个过滤器
+ */
+function formatImage(imgeUrl) {
+  if (imgeUrl.indexOf("@")) {
+    imgeUrl = imgeUrl.split('@')[0]
+  }
+  return imgeUrl;
+}
+
+module.exports = {
+  formatImage: formatImage
+}

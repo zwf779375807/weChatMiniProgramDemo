@@ -1,8 +1,9 @@
+<wxs module='filter' src='../../utils/filter.wxs'></wxs>
 <view class="main">
   <Mytitle></Mytitle>
 
   <view class='nav-wrap'>
-    <scroll-view class='nav ' scroll-x>
+    <scroll-view class='nav' scroll-x scroll-with-animation>
       <view class="nav_item {{index===currentNavIndex?'active':''}}" bindtap='activeNav' data-index='{{index}}' wx:for="{{navList}}" wx:key="{{index}}">
         {{item.text}}
       </view>
@@ -13,7 +14,7 @@
     <swiper indicator-dots autoplay interval="{{interval}}" duration="{{duration}}" indicator-color="rgba(0, 0, 0, .3)" indicator-active-color="#ff0000">
       <swiper-item wx:for="{{swiperList}}" wx:key="{{index}}">
         <navigator>
-          <image mode='widthFix' src='{{item.imgSrc}}'></image>
+          <image mode='widthFix' src='{{filter.formatImage(item.imgSrc)}}'></image>
         </navigator>
       </swiper-item>
     </swiper>
@@ -24,7 +25,7 @@
      url='../details/detail?id={{item.id}}'
     class='vide_item' wx:for="{{videosList}}" wx:key="{{index}}">
       <view class='video_img'>
-        <image mode='widthFix' src='{{item.imgSrc}}'></image>
+        <image mode='widthFix' src='{{filter.formatImage(item.imgSrc)}}'></image>
         <view class='video_info'>
           <view class="play_count_wrap">
             <text class='fa fa-play-circle-o'></text>

@@ -6,6 +6,7 @@ page {
 .nav {
   white-space: nowrap;
   padding: 5rpx 0;
+  height: 90rpx;
 }
 
 /*隐藏滚动条*/
