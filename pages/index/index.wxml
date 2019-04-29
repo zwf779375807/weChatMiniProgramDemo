@@ -22,7 +22,7 @@
 
   <view class='videos'>
     <navigator 
-     url='../details/detail?id={{item.id}}'
+     url='../details/detail?id={{item.id}}' hover-class='none'
     class='vide_item' wx:for="{{videosList}}" wx:key="{{index}}">
       <view class='video_img'>
         <image mode='widthFix' src='{{filter.formatImage(item.imgSrc)}}'></image>

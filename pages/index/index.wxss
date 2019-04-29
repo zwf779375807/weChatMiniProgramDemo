@@ -51,6 +51,7 @@ page {
   justify-content: space-between;
   padding: 20rpx ;
 }
+
 .vide_item{
   width: 48%;
   margin-bottom: 20rpx;
