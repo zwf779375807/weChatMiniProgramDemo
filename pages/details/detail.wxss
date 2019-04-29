@@ -4,7 +4,13 @@
   padding: 5rpx;
   color: #666;
 }
-
+.header{
+  position: fixed;
+  top:0;
+  background: #fff;
+  width: 100%;
+  z-index:100;
+}
 .video-wrap {
   margin-top: 10rpx;
 }
@@ -33,7 +39,8 @@
 }
 
 .others-wrap {
-  margin-top: 10rpx;
+  margin-top: 670rpx;
+  width: 100%;
 }
 
 .others-item {

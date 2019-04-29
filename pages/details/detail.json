@@ -2,5 +2,6 @@
   "navigationBarTitleText": "视频详情",
   "usingComponents": {
     "Mytitle": "../../components/Mytitle/Mytitle"
-  }
+  },
+  "disableScroll":true
 }

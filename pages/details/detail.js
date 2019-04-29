@@ -5,8 +5,14 @@ Page({
    * 页面的初始数据
    */
   data: {
-    videoInfo: null,
+    scroll_height: 0,
+    videoInfo: {},
     othersList: []
+  },
+
+  // 自定义防止点透效果
+  noTouch: function() {
+    return;
   },
 
   /**
@@ -17,6 +23,11 @@ Page({
     console.log(id)
     this.getVideoDetail(id);
     this.getVideoOthersList(id);
+    let windowHeight = wx.getSystemInfoSync().windowHeight // 屏幕的高度
+    let windowWidth = wx.getSystemInfoSync().windowWidth // 屏幕的宽度
+    this.setData({
+      scroll_height: windowHeight * 750 / windowWidth - (670)
+    })
   },
 
   getVideoDetail(videoId) {
@@ -25,7 +36,6 @@ Page({
       url: 'https://easy-mock.com/mock/5c1dfd98e8bfa547414a5278/bili/videoDetail?id=' + videoId,
       success(res) {
         if (res.data.code === 0) {
-          console.log(res)
           that.setData({
             videoInfo: res.data.data.videoInfo
           })

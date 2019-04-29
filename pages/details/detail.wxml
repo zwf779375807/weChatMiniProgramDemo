@@ -1,13 +1,14 @@
 <!--pages/details/detail.wxml-->
 <wxs module='filter' src='../../utils/filter.wxs'></wxs>
 <view class='main'>
-  <Mytitle></Mytitle>
-
-  <view class='video-wrap'>
-    <video src='http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4' controls ></video>
-    <view class='video_title'>
-      <text class='title'>{{videoInfo.videoTitle}}</text>
-      <text class='fa fa-angle-down'></text>
+  <view class='header' catchtouchmove="noTouch">
+    <Mytitle></Mytitle>
+    <view class='video-wrap'>
+      <video src='http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4' controls custom-cache="false"></video>
+      <view class='video_title'>
+        <text class='title'>{{videoInfo.videoTitle}}</text>
+        <text class='fa fa-angle-down'></text>
+      </view>
     </view>
 
     <view class='video_detail'>
@@ -16,22 +17,21 @@
       <text class='video_playCount'>{{videoInfo.playCount}}</text>
     </view>
   </view>
-
-  <view class='others-wrap'>
+  <scroll-view class='others-wrap' scroll-y="true" style='height:{{scroll_height}}rpx'>
     <navigator class='others-item' wx:for="{{othersList}}" wx:key="index">
-    <view class='image'>
-      <image src='{{filter.formatImage(item.imgSrc)}}' mode='widthFix'></image>
-    </view>
-    
+      <view class='image'>
+        <image src='{{filter.formatImage(item.imgSrc)}}' mode='widthFix'></image>
+      </view>
+
       <view class='other-info'>
-       <view class='other-title'>
-        {{item.title}}
-       </view>
-       <view class='other-detail'>
-        <text>{{item.playMsg}}万次观看</text>
-         <text>{{item.commentCount}}弹幕</text>
-       </view>
+        <view class='other-title'>
+          {{item.title}}
+        </view>
+        <view class='other-detail'>
+          <text>{{item.playMsg}}万次观看</text>
+          <text>{{item.commentCount}}弹幕</text>
+        </view>
       </view>
     </navigator>
-  </view>
+  </scroll-view>
 </view>

@@ -63,7 +63,8 @@ page {
   bottom: 20rpx;
   width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  padding: 0 20rpx;
   color: #fff;
   font-size: 24rpx;
 }
